@@ -17,6 +17,9 @@ This assistant is composed of two Python scripts:
 No cloud dependencies, no Google API, no credential setup.  
 Everything runs through your Notion integration.
 
+# creator's note:
+The best way to see this, is you wake up, open the terminal. cd to the ~/free-motion, then "python morningPrompt.py", paste the prompt to chatgpt or your favorite llm. then have a convo on what tasks you want/need to be done by the end of the day, ask it to give you the commands to add the tasks, or add them manually. Once you paste the prompt you can run "python actionNonchy.py" so you have that waiting for commands. You can paste the add task commands to you task list, then after that you can have a chat with the llm about the tasks and how your day will look then you ask it to give you a mock schedule for the day, i like to give it an amount of time i d like to spend on some tasks like "2h of cpu work", and once you like the schedule you guys came up with, ask it to give you to the schedule commands paste them on the terminal then voila. see the demo video...
+
 ---
 
 ## 🧩 Requirements
@@ -27,16 +30,6 @@ Everything runs through your Notion integration.
   - **Tasks** database  
 - A Notion integration token (Internal Integration Key)
 - Internet access for Notion API
-
----
-
-## 🗂 Folder Structure
-
-nonchy-assistant/
-│
-├── morningPrompt.py
-├── actionNonchy.py
-└── README.md
 
 ---
 
@@ -91,7 +84,7 @@ If you’re using Notion personally, you already have one — it’s your defaul
 You’ll paste it inside your Python script:
 ```python
 NOTION_TOKEN = "secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
+```
 Then, open each `.py` file and paste your credentials:
 
 ```python
@@ -99,7 +92,7 @@ NOTION_API_KEY = "your_secret_key_here"
 NOTION_PROJECTS_DB_ID = "your_projects_db_id"
 NOTION_TASKS_DB_ID = "your_tasks_db_id"
 To get each Database ID:
-
+```
 Open the database in your browser
 
 Copy the part of the URL after the last /
@@ -109,44 +102,45 @@ e.g. https://www.notion.so/.../20cea28cce5a80b7a75fe24ec71c055b
 
 ```bash
 pip install notion-client
+```
 
-
-☕️ Daily Routine
+## ☕️ Daily Routine
 Step 1 – Generate your Morning Prompt
 Run:
-
+```
 python morningPrompt.py
+```
 
 This prints your daily AI reflection prompt under:
 
-
+```
 ------ PROMPT TO COPY INTO CHATGPT ------
+```
 
 Paste it into ChatGPT (or any LLM).
 
 Your assistant will see your live project and task data, then help you plan and reflect.
 
-Step 2 – Execute Actions
+# Step 2 – Execute Actions
 When your AI outputs structured commands like:
-
+```
 ADD_TASK: {"Name": "Submit lab report", "Done": false}
 UPDATE_PROJECT: {"project": "Superscalar CPU", "field": "Last Step", "value": "Tested forwarding unit"}
+```
 Run:
-
+```
 python actionNonchy.py
-
+```
 Paste the command.
-
 It updates your Notion database instantly.
 
-🧠 Supported Commands
+# 🧠 Supported Commands
 
-Command	Description
+```
 ADD_TASK	Create a new task
 CHECK_TASK	Mark a task as done
 UPDATE_PROJECT	Update the “Last Step” text
-ADD_PROJECT	Add a new project
-
+```
 Example:
 
 ADD_PROJECT: {"Project Name": "SoC Design Blog", "Tags": ["CPU", "Writing"], "Next Step": "Outline article", "Summary": "Writing a technical blog about my CPU project", "Status": "In Progress"}
