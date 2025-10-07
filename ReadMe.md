@@ -5,7 +5,7 @@ It connects your **Projects** and **Tasks** databases with an AI assistant (like
 
 
 ## Video Demo
-![Demo GIF](assets/demo.gif)
+![Demo GIF](demo.gif)
 
 ## 🚀 Overview
 
