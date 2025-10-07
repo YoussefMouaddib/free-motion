@@ -17,7 +17,7 @@ This assistant is composed of two Python scripts:
 No cloud dependencies, no Google API, no credential setup.  
 Everything runs through your Notion integration.
 
-# Creator's note:
+# 📕 Creator's note:
 The way I use this, is you wake up, open the terminal. cd to the ~/free-motion, then "python morningPrompt.py", paste the prompt to chatgpt or your favorite llm, MAKE SURE TO EDIT THE PROMPT TEMPLATE at the end of it I make it give me news I care about you can change that whatever you want. then have a convo on what tasks you want/need to be done by the end of the day, ask it to give you the commands to add the tasks, or add them manually. Once you paste the prompt you can run "python actionNonchy.py" so you have that waiting for commands. You can paste the add task commands to you task list, then after that you can have a chat with the llm about the tasks and how your day will look then you ask it to give you a mock schedule for the day, i like to give it an amount of time i d like to spend on some tasks like "2h of cpu work", and once you like the schedule you guys came up with, ask it to give you to the schedule commands paste them on the terminal then voila. see the demo video...
 
 ---
