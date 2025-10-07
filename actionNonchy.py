@@ -8,10 +8,10 @@ from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-# Notion setup
-NOTION_API_KEY = "secret_c0omyT15jLQhICgbAEYcszy3q9ZzFD1d6E7nF05sLJY"
-NOTION_PROJECTS_DB_ID = "20cea28cce5a80b7a75fe24ec71c055b"
-NOTION_TASKS_DB_ID = "210ea28cce5a80c3a6b1d6a1e723a5b1"
+# Notion setup ADD YOUR KEY & IDs HERE:
+NOTION_API_KEY = "secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+NOTION_PROJECTS_DB_ID = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+NOTION_TASKS_DB_ID = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 notion = Client(auth=NOTION_API_KEY)
 
 SCOPES = ['https://www.googleapis.com/auth/calendar']
@@ -140,3 +140,4 @@ def main_loop():
 
 if __name__ == "__main__":
     main_loop()
+
