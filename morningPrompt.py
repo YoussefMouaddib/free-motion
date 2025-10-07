@@ -3,10 +3,10 @@ from notion_client import Client
 from datetime import datetime, timedelta
 
 
-# Set up Notion client and DB IDs
-NOTION_API_KEY = "secret_c0omyT15jLQhICgbAEYcszy3q9ZzFD1d6E7nF05sLJY"
-NOTION_PROJECTS_DB_ID = "20cea28cce5a80b7a75fe24ec71c055b"
-NOTION_TASKS_DB_ID = "210ea28cce5a80c3a6b1d6a1e723a5b1"
+# Set up Notion client and DB IDs (ADD YOURS HERE!)
+NOTION_API_KEY = "secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+NOTION_PROJECTS_DB_ID = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+NOTION_TASKS_DB_ID = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 
 
@@ -149,3 +149,4 @@ if __name__ == "__main__":
     final_prompt = build_prompt()
     print("\n\n------ PROMPT TO COPY INTO CHATGPT ------\n")
     print(final_prompt)
+
