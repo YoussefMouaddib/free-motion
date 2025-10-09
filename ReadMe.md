@@ -8,6 +8,9 @@ It connects your **Projects** and **Tasks** databases with an AI assistant (like
 ![Demo GIF](demo.gif)
 
 ---
+# 📕 Creator's note:
+The way I use this is I wake up, open the terminal. cd to ~/free-motion, then "python morningPrompt.py", paste the prompt to chatgpt (or your favorite llm), MAKE SURE TO EDIT THE PROMPT TEMPLATE (at the end of it, I make it give me news I care about you can change that whatever you want). then have a convo on what tasks you want/need to be done by the end of the day, ask it to give you the commands to add the tasks, or add them manually. Once you paste the prompt you can run "python actionNonchy.py" so you have that waiting for commands. You can paste the add task commands to you task list then you can have a chat with the llm about how your day will look then you ask it to give you a mock schedule for the day (i like to give it an amount of time i d like to spend on some tasks like "2h of cpu work"), and once you like the schedule you guys came up with, ask it to give you to the schedule commands paste them on the terminal then voila. see the demo...
+
 ## 🚀 Overview
 
 This assistant is composed of two Python scripts:
@@ -133,6 +136,7 @@ It updates your Notion database instantly.
 # 🧠 Supported Commands
 
 ```
+SCHEDULE_EVENT create a labeled time block in your calendar
 ADD_TASK	Create a new task
 CHECK_TASK	Mark a task as done
 UPDATE_PROJECT	Update the “Last Step” text
@@ -146,8 +150,7 @@ ADD_PROJECT: {"Project Name": "SoC Design Blog", "Tags": ["CPU", "Writing"], "Ne
 If you prefer having your Notion tasks mirrored to Google Calendar,just connect your Notion calendar view to your Google Calendar from within Notion’s UI.
 No credentials, no API setup needed.And you'll have your schedule be updated on your google calendar.
 
-# 📕 Creator's note:
-The way I use this is I wake up, open the terminal. cd to ~/free-motion, then "python morningPrompt.py", paste the prompt to chatgpt (or your favorite llm), MAKE SURE TO EDIT THE PROMPT TEMPLATE (at the end of it, I make it give me news I care about you can change that whatever you want). then have a convo on what tasks you want/need to be done by the end of the day, ask it to give you the commands to add the tasks, or add them manually. Once you paste the prompt you can run "python actionNonchy.py" so you have that waiting for commands. You can paste the add task commands to you task list then you can have a chat with the llm about how your day will look then you ask it to give you a mock schedule for the day (i like to give it an amount of time i d like to spend on some tasks like "2h of cpu work"), and once you like the schedule you guys came up with, ask it to give you to the schedule commands paste them on the terminal then voila. see the demo...
+
 
 
 for any questions please feel free to email: youssefmouaddib11@gmail.com
